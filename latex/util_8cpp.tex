@@ -1,0 +1,44 @@
+\hypertarget{util_8cpp}{}\section{util.\+cpp File Reference}
+\label{util_8cpp}\index{util.\+cpp@{util.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}globals.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}mouse.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}graphics.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}hash.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{util_8cpp_ab0bf086f9da58739284354a486ebb908}{utility\+Central} (\hyperlink{structEvent}{Event} eventstruct)
+\begin{DoxyCompactList}\small\item\em The main hub for collecting the various events into a central location. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{util_8cpp_ab0bf086f9da58739284354a486ebb908}{}\index{util.\+cpp@{util.\+cpp}!utility\+Central@{utility\+Central}}
+\index{utility\+Central@{utility\+Central}!util.\+cpp@{util.\+cpp}}
+\subsubsection[{utility\+Central(\+Event eventstruct)}]{\setlength{\rightskip}{0pt plus 5cm}void utility\+Central (
+\begin{DoxyParamCaption}
+\item[{{\bf Event}}]{eventstruct}
+\end{DoxyParamCaption}
+)}\label{util_8cpp_ab0bf086f9da58739284354a486ebb908}
+
+
+The main hub for collecting the various events into a central location. 
+
+\begin{DoxyAuthor}{Author}
+Paul Hinker
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+This function gets called when an event happens in callbacks. Depending on the enum and data passed in it will do different things. When a mouse click is passed in, it sends that data to the click function in the container class screen. When a mouse drag is sent in, it sends it to the click\+And\+Drag function in screen. It does the same for keyboard presses, sending them to keyboard\+Action in screen.
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em event} & -\/ structure that contains data about the event to handle \\
+\hline
+\end{DoxyParams}

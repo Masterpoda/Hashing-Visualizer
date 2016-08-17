@@ -1,0 +1,245 @@
+<html>
+<body>
+<center>
+<h1>CSC 300 - Data Structures - Program 2</h1>
+</center>
+<font size=4>
+<hr>
+<h2>Hash Class</h2>
+The second programming assignment involves two main components.  First, your team is tasked with creating your own hash class.  We've talked about hash codes, hash tables, and hashing in class and it's time to put some of that theory into practice.  The interface for your class needs to provide:
+<ul>
+<li> Constructor(s)</li>
+<ul><li> Zero parameter</li>
+<li> One parameter (starting table size)</li>
+</ul>
+<li> Destructor</li>
+<li> Operations</li>
+<ul><li> find</li>
+<li> insert</li>
+<li> remove</li>
+<li> size</li>
+<li> load factor</li>
+</ul>
+</ul>
+<p>
+Note that this is a templatized class so that the key and value can be of any
+types.  You can assume that any types used as keys during testing will be of
+<b>Comparable</b> type as described in the text.
+<pre>
+template&lt;typename K, typename V&gt;
+class Hash
+{
+   public:
+      Hash();                                    // zero parameter constructor
+      Hash(size_t init_size);                    // one parameter constructor
+     ~Hash();                                    // destructor
+
+      V&amp; operator[](const K&amp; Key);               // overloaded []
+      V&amp; insert(const K&amp; Key, V&amp; Value);         // insert
+      V find(const K&amp; Key);                      // find a key
+      size_t size();                             // current size
+      double loadFactor();                       // load factor
+      int hashCodeGenerated(int hashCode);       // count of time hashCode was generated
+      int* bucketProbed();                       // frequency of a hash code
+      void remove(const K&amp; Key);                 // remove a key from hash
+
+   private:
+      // implementation dependent
+};
+</pre>
+<P>
+Your hash implementation will be entered into a contest with all the other submissions from the class.  Your hash class will be used to store various data sets and performance statistics will be gathered and then used to rank your implementation against the other submissions including a submission by the instructor.
+<P>
+You must implement your own hash class, you may not use STL sets, maps, or unordered maps.  You are welcome to use STL pairs, lists, vectors, stacks, queues, deques, etc.  You may use any of the collision resolution strategies that we've talked about in the lecture or are presented in the book.  If you use something other than the hashing functions described in class or the text, describe how you came about using it.  (E.G. trial and error, reading other literature, etc.)
+<P>
+Your implementation must be able to rehash your table when the load factor exceeds a set value (typically 75% for open addressing).  Your implementation must report when it is rehashing the table and also report the new table size.  Example:
+<P>
+<pre>
+	preformanceTest inputFile
+    Table created with size: 1009
+	... loadFactor 75% (rehashing new size = 2027)
+	... loadFactor 75% (rehashing new size = 4057)
+	... loadFactor 75% (rehashing new size = 8117)
+	... loadFactor 75% (rehashing new size = 16249)
+</pre>
+
+When rehashing your table, pick a new size which is a prime number approximately twice as large as the old table size.
+<P>
+You will notice a few non-standard public member functions in the interface specification (above).  These will be used to enable the second portion of the assignment which will be described later.
+<P>
+<h3><u>int hashCodeGenerated(const int hashCode)</u></h3>
+<h3><u>int bucketProbed(const int bucket)</u></h3>
+<hr>
+<P>
+This function will return the number of times a particular key has been entered into the hash.  For example, suppose a hash is declared as follows:
+<pre>
+Hash<string, string> myHash;
+</pre>
+and the following inserts are performed:
+<pre>
+myHash.insert("George", "Wilson");
+myHash.insert("Bugs", "Bunny");
+myHash.insert("Gracie", "Allen");
+myHash.insert("George", "Burns");
+myHash.insert("Jojo", "Bojo");
+myHash.insert("Wiley", "Coyote");
+myHash.insert("Jojo", "Bonzo");
+myHash.insert("Jojo", "Lipetski");
+</pre>
+Let's further assume that the hash table size is 7 and the hashing function used produces:
+<pre>
+hashcode("George") = 6
+hashcode("Bugs") = 0
+hashcode("Gracie") = 2
+hashcode("George") = 6
+hashcode("JoJo") = 2
+hashcode("Wiley") = 3
+hashcode("JoJo") = 2
+hashcode("JoJo") = 2
+
+   HashTable (N=7)
+   ===========
+ 0 | Bugs    | -&gt; Bunny
+   ===========
+ 1 |         |
+   ===========
+ 2 | Gracie  | -&gt; Allen
+   ===========
+ 3 | Jojo    | -&gt; Lipetski
+   ===========
+ 4 | Wiley   | -&gt; Coyote
+   ===========
+ 5 |         |
+   ===========
+ 6 | George  | -&gt; Burns
+   ===========
+
+The value sent to hashCodeGenerated will be the compressed hashcode.
+
+hashCodeGenerated(0) = 1
+hashCodeGenerated(1) = 0
+hashCodeGenerated(2) = 4
+hashCodeGenerated(3) = 1
+hashCodeGenerated(4) = 0
+hashCodeGenerated(5) = 0
+hashCodeGenerated(6) = 1
+
+bucketProbed(0) = 1
+bucketProbed(1) = 0
+bucketProbed(2) = 4
+bucketProbed(3) = 4
+bucketProbed(4) = 1
+bucketProbed(5) = 0
+bucketProbed(6) = 2
+
+Bucket 0 is probed one time since 'Bugs' checks to see if it's empty for insertion.
+Bucket 1 is never probed.
+Bucket 2 is probed 4 times, once when Gracie is inserted, and once for each time Jojo is inserted.
+Bucket 3 is probed 4 times, three times when looking to insert Jojo and one time when looking to insert Wiley.
+Bucket 4 is probed one time when looking to insert Wiley.
+Bucket 5 is never probed.
+Bucket 6 is probed once when looking to insert George.
+
+</pre>
+If you are doing separate chaining as your collision resolution then the hashCodeGenerated and bucketProbed values will be the same for a given bucket.
+<P>
+Note that the hashCodeGenerated returns an integer that reports how many times 
+a particular key was generated by the hashing function.
+The bucketProbed function returns the number of times a bucket was probed.  
+This value is incremented:
+<ul>
+<li> when a bucket is checked to see if it's empty
+<li> when a bucket is checked to see if it contains a particular key (i.e. during insertion, deletion, or find)
+</ul>
+<p>
+In the example (above) you can see that even though hashCodeGenerated(3) = 1,
+bucketProbed(3) = 4 because bucket(3) was probed each time JoJo was inserted.  The 3 insertions of Jojo incremented both the bucket(2) and bucket(3) probed values.
+<P>
+Also, the if the same key is inserted into the hash, it is not duplicated in the table but the table does need to keep track of how many times the same key was inserted.  The value item in the table should reflect the <b>last</b> key, value pair that was inserted for a particular key.
+<P>
+If a key that has a count &gt; 1 is removed from the hash, all references to the key are removed (i.e. <b>don't</b> decrement the count and leave the key in the table).  Keep in mind that <b>remove</b> operations will also change the values in the hashCodeGenerated and bucketProbed structures.
+Keep in mind that if you are using open addressing (i.e. not separate chaining) then you will need to handle keys that are removed but might be necessary to the process of finding subsequent keys.
+<P>
+<hr>
+Make sure you thoroughly test your hash function.  The tests used to grade the project will include both performance and correctness tests.  If your submission does not pass the correctness tests then it will not be entered into the performance competition.
+<P>
+Some tests to use include (but should not be limited to):
+<ul>
+<li> Inserting a large number of random key,value pairs</li>
+<li> Constructing a hash with a small initial size and inserting a large number of key, value pairs.</li>
+<li> Inserting duplicate keys</li>
+<li> Removing and inserting key,value pairs</li>
+<li> Insert key, value pairs, remove one or more of the keys, search the table for the removed key</li>
+<li> Insert key, value pairs, search the table (via find) to make sure the key, value pair can be recovered.</li>
+</ul>
+<hr>
+Since you will be competing against the other teams (and the instructor) it's
+only fair that each team be allowed to submit their own data file to be included
+in the performance testing.  This is not a requirement but it's your chance to 
+sabotage^H^H^H^H^H^H^H^H challenge the other implementations by submitting a 
+data file that will grind the competition into the dust while your code 
+gracefully (and quickly) handles it.
+<P>
+The performance tests will be run using hashes declared as:
+<pre>
+Hash&lt;std::string, std::string&gt;
+</pre>
+This is so that the hashcode function will play a significant role in the performance of your implementation.
+Example data files will be available before the project due date.
+<h3><u><center>Due - March 28 - Midnight (i.e. 1st minute of March 29)</center></u></h3>
+<hr>
+We want to visually monitor how well (or badly) the hashing function is distributing inserted items.  To do so, we will use the two additional interfaces described (above) hashCodeGenerated and bucketProbed.
+<P>
+<img src="DegenerateBAD.png">
+<BR>
+In the image (above) we are mapping the number of times a hash table bucket is probed during a series of inserts into the table.  Note the title of the window shows that the Load Factor is 70% and the maximum probed frequency found was 15.  The color gradient goes from low (blue) to high (red) with green representing the median.
+<P>
+This representation is meant to generate thought into how you would visually
+represent the success this particular hash code has at evenly distributing generated keys throughout the hash table.  I'm interested in seeing innovative ways to use visualization as a performance analysis and debugging tool.  Use this as
+an opportunity to impress the class with your creativity.
+<hr>
+<h3><u><center>Sample Data Files</u></h3>
+Here are a couple files with words that can be hashed to test your hash
+implementation.  One is a story about Tom Sawyer and the other is a federal
+government publication discussin potential regulations that may eventually
+become part of the CFR (Code of Federal Regulations).  You will notice some
+differences between the two which may cause differing behavior in your
+implementation.
+<p>
+<a href="tom.txt">Mark Twain's Tom Sawyer</a><br>
+<a href="FR-2015-11-18.txt">November 18, 2015 Federal Register</a><br>
+<p>
+When testing your implementation, keep in mind that one of the versions that
+will be benchmarked along with yours and the rest of the class is the STL
+hash implementation (unordered_map).  So if you have a question about 
+constraints on the input (size primarily) you can be confident that if the
+STL version does not handle a data set then it will not be part of the testing.
+On the other hand, if the STL unordered_map does handle a data set, it would
+be fair game to be part of the testing.
+<hr>
+If you want to make sure you've implemented the interface correctly
+<a href="main.cpp"> here</a> is a main.cpp which you should be able to take
+and compile with your hash.h.
+<P>
+<pre>
+g++ -o main main.cpp -std=c++11
+</pre>
+
+<h3><u><center>Teams</center></u></h3>
+<hr>
+<pre>
+Matt Achen, Ian Beamer, Lyndon Engel
+Mark Block, Kyle MacMillan
+Adam Bollinger, Chase Browdie, Aaron Campbell
+Mark Buttenhoff, Dylan Payne, Brandon Faulkenberry
+Josef Ceritelli, Samuel Patzer
+Adam Chally, Jake Miller, Mathias Wingert
+Zach Christy, Catherine Oborski, Kenneth Petry
+John Colton, Samuel Williams
+Chris Damers, Tyler Kinnear, Eric Vandervort
+Jeremy Gamet, Jacob Thom
+Reed Harmon, Caleb Kaselnak, Ryan Hinrichs
+Sierra Wahlin-Rhoades, Jimmy Hinker
+Jack Westlund, Tyler Holinka, Daniel Hodgin
+</body>
+</html>

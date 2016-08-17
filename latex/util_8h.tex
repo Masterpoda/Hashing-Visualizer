@@ -1,0 +1,58 @@
+\hypertarget{util_8h}{}\section{util.\+h File Reference}
+\label{util_8h}\index{util.\+h@{util.\+h}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structEvent}{Event}
+\begin{DoxyCompactList}\small\item\em Contains information about the event that is happening and constructors that assign enums and data depending on what is passed in. Depending on the complexity of the application, the event structure might need to be extended. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{util_8h_a0c8186d9b9b7880309c27230bbb5e69d}{}typedef unsigned char \hyperlink{util_8h_a0c8186d9b9b7880309c27230bbb5e69d}{byte}\label{util_8h_a0c8186d9b9b7880309c27230bbb5e69d}
+
+\begin{DoxyCompactList}\small\item\em convenience typedef \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{util_8h_a2628ea8d12e8b2563c32f05dc7fff6fa}{}enum \hyperlink{util_8h_a2628ea8d12e8b2563c32f05dc7fff6fa}{Event\+Type} \{ \\*
+{\bfseries I\+N\+I\+T}, 
+{\bfseries D\+I\+S\+P\+L\+A\+Y}, 
+{\bfseries K\+E\+Y\+B\+O\+A\+R\+D}, 
+{\bfseries M\+O\+U\+S\+E\+C\+L\+I\+C\+K}, 
+\\*
+{\bfseries M\+O\+U\+S\+E\+D\+R\+A\+G}
+ \}\label{util_8h_a2628ea8d12e8b2563c32f05dc7fff6fa}
+\begin{DoxyCompactList}\small\item\em \hyperlink{structEvent}{Event} enum to describing events. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{util_8h_ab0bf086f9da58739284354a486ebb908}{utility\+Central} (\hyperlink{structEvent}{Event} eventstruct)
+\begin{DoxyCompactList}\small\item\em The main hub for collecting the various events into a central location. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{util_8h_ab0bf086f9da58739284354a486ebb908}{}\index{util.\+h@{util.\+h}!utility\+Central@{utility\+Central}}
+\index{utility\+Central@{utility\+Central}!util.\+h@{util.\+h}}
+\subsubsection[{utility\+Central(\+Event eventstruct)}]{\setlength{\rightskip}{0pt plus 5cm}void utility\+Central (
+\begin{DoxyParamCaption}
+\item[{{\bf Event}}]{eventstruct}
+\end{DoxyParamCaption}
+)}\label{util_8h_ab0bf086f9da58739284354a486ebb908}
+
+
+The main hub for collecting the various events into a central location. 
+
+\begin{DoxyAuthor}{Author}
+Paul Hinker
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+This function gets called when an event happens in callbacks. Depending on the enum and data passed in it will do different things. When a mouse click is passed in, it sends that data to the click function in the container class screen. When a mouse drag is sent in, it sends it to the click\+And\+Drag function in screen. It does the same for keyboard presses, sending them to keyboard\+Action in screen.
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em event} & -\/ structure that contains data about the event to handle \\
+\hline
+\end{DoxyParams}

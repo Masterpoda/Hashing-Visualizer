@@ -1,0 +1,122 @@
+\hypertarget{classMouse}{}\section{Mouse Class Reference}
+\label{classMouse}\index{Mouse@{Mouse}}
+
+
+This class keeps track of mouse information.  
+
+
+
+
+{\ttfamily \#include $<$mouse.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classMouse_a99024d3700d649ae19c1537b42a3e86d}{Mouse} ()
+\item 
+\hyperlink{classMouse_afdf7d8abef29c10be77ead773f964f4f}{$\sim$\+Mouse} ()
+\item 
+void \hyperlink{classMouse_a7ae3c6b4663e01c939675b671a78b17e}{mouse\+Click} (int button, int state, int x, int y)
+\begin{DoxyCompactList}\small\item\em Process a mouse click event. \end{DoxyCompactList}\item 
+void \hyperlink{classMouse_ae8c7a78a1d2dd2e44eba6b3cce0ea915}{mouse\+Drag} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Process a mouse drag event. This means one or more buttons are in the down state and the mouse position is moving. \end{DoxyCompactList}\item 
+int \hyperlink{classMouse_ac5364593f0ad7db9ba8f696273dbbbb4}{mouse\+Clicked} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class keeps track of mouse information. 
+
+\begin{DoxyParagraph}{Description}
+Keeps the mouse state between events. 
+\end{DoxyParagraph}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classMouse_a99024d3700d649ae19c1537b42a3e86d}{}\index{Mouse@{Mouse}!Mouse@{Mouse}}
+\index{Mouse@{Mouse}!Mouse@{Mouse}}
+\subsubsection[{Mouse()}]{\setlength{\rightskip}{0pt plus 5cm}Mouse\+::\+Mouse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMouse_a99024d3700d649ae19c1537b42a3e86d}
+Constructor for the class \hypertarget{classMouse_afdf7d8abef29c10be77ead773f964f4f}{}\index{Mouse@{Mouse}!````~Mouse@{$\sim$\+Mouse}}
+\index{````~Mouse@{$\sim$\+Mouse}!Mouse@{Mouse}}
+\subsubsection[{$\sim$\+Mouse()}]{\setlength{\rightskip}{0pt plus 5cm}Mouse\+::$\sim$\+Mouse (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMouse_afdf7d8abef29c10be77ead773f964f4f}
+Destructor for the class 
+
+\subsection{Member Function Documentation}
+\hypertarget{classMouse_a7ae3c6b4663e01c939675b671a78b17e}{}\index{Mouse@{Mouse}!mouse\+Click@{mouse\+Click}}
+\index{mouse\+Click@{mouse\+Click}!Mouse@{Mouse}}
+\subsubsection[{mouse\+Click(int button, int state, int x, int y)}]{\setlength{\rightskip}{0pt plus 5cm}void Mouse\+::mouse\+Click (
+\begin{DoxyParamCaption}
+\item[{int}]{button, }
+\item[{int}]{state, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{classMouse_a7ae3c6b4663e01c939675b671a78b17e}
+
+
+Process a mouse click event. 
+
+Function to track a mouse click state and location
+
+\begin{DoxyAuthor}{Author}
+Paul Hinker
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Jan 5, 2016
+\end{DoxyDate}
+\begin{DoxyParagraph}{Course -\/ 2016}
+
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em button} & -\/ describes which button was clicked \\
+\hline
+\mbox{\tt in}  & {\em state} & -\/ describes whether the button went down or up \\
+\hline
+\mbox{\tt in}  & {\em x} & -\/ the x-\/coordinate of where the click took place \\
+\hline
+\mbox{\tt in}  & {\em y} & -\/ the y-\/coordinate of where the click took place \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMouse_ac5364593f0ad7db9ba8f696273dbbbb4}{}\index{Mouse@{Mouse}!mouse\+Clicked@{mouse\+Clicked}}
+\index{mouse\+Clicked@{mouse\+Clicked}!Mouse@{Mouse}}
+\subsubsection[{mouse\+Clicked()}]{\setlength{\rightskip}{0pt plus 5cm}int Mouse\+::mouse\+Clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classMouse_ac5364593f0ad7db9ba8f696273dbbbb4}
+Function for when mouse if clicked \hypertarget{classMouse_ae8c7a78a1d2dd2e44eba6b3cce0ea915}{}\index{Mouse@{Mouse}!mouse\+Drag@{mouse\+Drag}}
+\index{mouse\+Drag@{mouse\+Drag}!Mouse@{Mouse}}
+\subsubsection[{mouse\+Drag(int x, int y)}]{\setlength{\rightskip}{0pt plus 5cm}void Mouse\+::mouse\+Drag (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{classMouse_ae8c7a78a1d2dd2e44eba6b3cce0ea915}
+
+
+Process a mouse drag event. This means one or more buttons are in the down state and the mouse position is moving. 
+
+Function to track when the mouse is dragged
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & -\/ the x-\/coordinate of the mouse drag event \\
+\hline
+\mbox{\tt in}  & {\em y} & -\/ the y-\/coordiante of the mouse drag event \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{mouse_8h}{mouse.\+h}\item 
+\hyperlink{mouse_8cpp}{mouse.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,214 @@
+\hypertarget{main_8cpp}{}\section{main.\+cpp File Reference}
+\label{main_8cpp}\index{main.\+cpp@{main.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}util.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}graphics.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$G\+L/glut.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8cpp_a4ea013001a5fb47853d0fab8f8de35cd}{display} (void)
+\item 
+void \hyperlink{main_8cpp_acc1ffe65e6869931318610cae7210078}{reshape} (int w, int h)
+\begin{DoxyCompactList}\small\item\em Handler for reshape events. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_aef7ba2f69afb2d954545f64c7fe24b14}{keyboard} (unsigned char key, int x, int y)
+\begin{DoxyCompactList}\small\item\em Handler for keyboard events. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a125707cf235695f4eb006113f0c01265}{mouse\+Click} (int button, int state, int x, int y)
+\begin{DoxyCompactList}\small\item\em Handler for mouse click events. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_abc52dd9b4c550aac089ffec77d043c56}{mouse\+Motion} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Handler for mouse motion (i.\+e. drag) events. \end{DoxyCompactList}\item 
+\hypertarget{main_8cpp_acadade7e3c7a80c1ecdd27b8317a0525}{}void \hyperlink{main_8cpp_acadade7e3c7a80c1ecdd27b8317a0525}{display\+Guess} (int x, int y)\label{main_8cpp_acadade7e3c7a80c1ecdd27b8317a0525}
+
+\begin{DoxyCompactList}\small\item\em Displays letter clicked. \end{DoxyCompactList}\item 
+void \hyperlink{main_8cpp_a71c2645dd5bde59b27a90febf27c3259}{init\+Open\+G\+L} (const char $\ast$filename, int nrows, int ncols)
+\begin{DoxyCompactList}\small\item\em Function to do the initialization of the open\+G\+L event handlers. \end{DoxyCompactList}\item 
+int \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8cpp_a4ea013001a5fb47853d0fab8f8de35cd}{}\index{main.\+cpp@{main.\+cpp}!display@{display}}
+\index{display@{display}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{display(void)}]{\setlength{\rightskip}{0pt plus 5cm}void display (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_a4ea013001a5fb47853d0fab8f8de35cd}
+Open\+G\+L callback function prototypes Display handler
+
+\begin{DoxyAuthor}{Author}
+Paul Hinker 
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+callback function that tells Open\+G\+L how to redraw window 
+\end{DoxyParagraph}
+\hypertarget{main_8cpp_a71c2645dd5bde59b27a90febf27c3259}{}\index{main.\+cpp@{main.\+cpp}!init\+Open\+G\+L@{init\+Open\+G\+L}}
+\index{init\+Open\+G\+L@{init\+Open\+G\+L}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{init\+Open\+G\+L(const char $\ast$filename, int nrows, int ncols)}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Open\+G\+L (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{window\+Title, }
+\item[{int}]{nrows, }
+\item[{int}]{ncols}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_a71c2645dd5bde59b27a90febf27c3259}
+
+
+Function to do the initialization of the open\+G\+L event handlers. 
+
+various commands to initialize Open\+G\+L and G\+L\+U\+T
+
+\begin{DoxyAuthor}{Author}
+Paul Hinker 
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+Initialize a variety of glut callback functions
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em window\+Title} & -\/ The title to place on the window \\
+\hline
+\mbox{\tt in}  & {\em nrows} & -\/ Number of pixels for the window height \\
+\hline
+\mbox{\tt in}  & {\em ncols} & -\/ Number of pixels for the window width \\
+\hline
+\end{DoxyParams}
+\hypertarget{main_8cpp_aef7ba2f69afb2d954545f64c7fe24b14}{}\index{main.\+cpp@{main.\+cpp}!keyboard@{keyboard}}
+\index{keyboard@{keyboard}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{keyboard(unsigned char key, int x, int y)}]{\setlength{\rightskip}{0pt plus 5cm}void keyboard (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{key, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_aef7ba2f69afb2d954545f64c7fe24b14}
+
+
+Handler for keyboard events. 
+
+callback function that tells Open\+G\+L how to handle keystrokes
+
+\begin{DoxyAuthor}{Author}
+Paul Hinker 
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+callback function that tells Open\+G\+L how to handle keystrokes
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em key} & -\/ Key pressed on keyboard \\
+\hline
+\mbox{\tt in}  & {\em x} & -\/ x location where the mouse was when the key was typed \\
+\hline
+\mbox{\tt in}  & {\em y} & -\/ y location where the mouse was when the key was typed \\
+\hline
+\end{DoxyParams}
+\hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{}\index{main.\+cpp@{main.\+cpp}!main@{main}}
+\index{main@{main}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{main(int argc, char $\ast$argv[])}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+\begin{DoxyAuthor}{Author}
+Paul Hinker
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+A barebones main to demonstrate the use of Open\+G\+L and it\textquotesingle{}s callback functionality.
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em argc} & -\/ a value denoting the number of arguments declared in the command line \\
+\hline
+\mbox{\tt in}  & {\em argv} & -\/ a pointer array full of the character strings signifying the files and function calls needed by the user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 program ran successful. 
+
+1 the program failed or there was an error. 
+\end{DoxyReturn}
+\hypertarget{main_8cpp_a125707cf235695f4eb006113f0c01265}{}\index{main.\+cpp@{main.\+cpp}!mouse\+Click@{mouse\+Click}}
+\index{mouse\+Click@{mouse\+Click}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{mouse\+Click(int button, int state, int x, int y)}]{\setlength{\rightskip}{0pt plus 5cm}void mouse\+Click (
+\begin{DoxyParamCaption}
+\item[{int}]{button, }
+\item[{int}]{state, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_a125707cf235695f4eb006113f0c01265}
+
+
+Handler for mouse click events. 
+
+Transfer mouse click events to the central processing function.
+
+\begin{DoxyAuthor}{Author}
+Paul Hinker 
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+Transfer mouse click events to the central processing function
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em button} & -\/ Which mouse button was clicked \\
+\hline
+\mbox{\tt in}  & {\em x} & -\/ x location where the mouse was when button was clicked \\
+\hline
+\mbox{\tt in}  & {\em y} & -\/ y location where the mouse was when button was clicked \\
+\hline
+\end{DoxyParams}
+\hypertarget{main_8cpp_abc52dd9b4c550aac089ffec77d043c56}{}\index{main.\+cpp@{main.\+cpp}!mouse\+Motion@{mouse\+Motion}}
+\index{mouse\+Motion@{mouse\+Motion}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{mouse\+Motion(int x, int y)}]{\setlength{\rightskip}{0pt plus 5cm}void mouse\+Motion (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_abc52dd9b4c550aac089ffec77d043c56}
+
+
+Handler for mouse motion (i.\+e. drag) events. 
+
+Transfer mouse movement events to the central processing function.
+
+\begin{DoxyAuthor}{Author}
+Paul Hinker 
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+Transfer mouse movement events to the central processing function
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & -\/ x location of mouse \\
+\hline
+\mbox{\tt in}  & {\em y} & -\/ y location of mouse \\
+\hline
+\end{DoxyParams}
+\hypertarget{main_8cpp_acc1ffe65e6869931318610cae7210078}{}\index{main.\+cpp@{main.\+cpp}!reshape@{reshape}}
+\index{reshape@{reshape}!main.\+cpp@{main.\+cpp}}
+\subsubsection[{reshape(int w, int h)}]{\setlength{\rightskip}{0pt plus 5cm}void reshape (
+\begin{DoxyParamCaption}
+\item[{int}]{w, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)}\label{main_8cpp_acc1ffe65e6869931318610cae7210078}
+
+
+Handler for reshape events. 
+
+\begin{DoxyAuthor}{Author}
+Paul Hinker 
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+callback function that tells Open\+G\+L how to resize window note that this is called when the window is first created
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em w} & -\/ with of the screen \\
+\hline
+\mbox{\tt in}  & {\em h} & -\/ height of the screencallback function that tells Open\+G\+L how to resize window note that this is called when the window is first created \\
+\hline
+\end{DoxyParams}

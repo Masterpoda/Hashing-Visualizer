@@ -1,0 +1,387 @@
+\hypertarget{classHash}{}\section{Hash$<$ K, V $>$ Class Template Reference}
+\label{classHash}\index{Hash$<$ K, V $>$@{Hash$<$ K, V $>$}}
+
+
+{\ttfamily \#include $<$Hash.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classHash_a37942689c0b3909fd9d4223e972b3214}{Hash} ()
+\item 
+\hyperlink{classHash_af865b46873f217c0a6f4c216697ad8ac}{Hash} (size\+\_\+t init\+\_\+size)
+\item 
+\hyperlink{classHash_aa4cf3d3f9f57ae71aaa4d80d31d08551}{$\sim$\+Hash} ()
+\item 
+V \& \hyperlink{classHash_a9e05844661ba3960f6381148b56f5cf7}{operator\mbox{[}$\,$\mbox{]}} (const K \&Key)
+\item 
+V \& \hyperlink{classHash_aee6a11f986c5924af8dd95f5d4f0e945}{insert} (const K \&Key, V \&Value)
+\item 
+V \hyperlink{classHash_a5785086ca51aa08e7175e97e4a853334}{find} (const K \&Key)
+\item 
+size\+\_\+t \hyperlink{classHash_abd05714536838b5bd2a393036c7437db}{size} ()
+\item 
+double \hyperlink{classHash_a6b0680a8de89ffa05aefbe05d0e6d738}{load\+Factor} ()
+\item 
+int \hyperlink{classHash_addea524e1e28ddc1731287f5cbc11c71}{hash\+Code\+Generated} (int hash\+Code)
+\item 
+int $\ast$ \hyperlink{classHash_af61bd05265387d4cf9930cbfd9cff57e}{bucket\+Probed} ()
+\item 
+void \hyperlink{classHash_a453733aa477944c75e30f629f12e7dd7}{remove} (const K \&Key)
+\item 
+void \hyperlink{classHash_a00bb410aea1cce94e1766d70e93534b4}{print\+\_\+table} ()
+\item 
+K \hyperlink{classHash_a3e5bfab4dde4f0157d7b689d599ab294}{get\+Key} (int index)
+\item 
+\hypertarget{classHash_af865b46873f217c0a6f4c216697ad8ac}{}{\bfseries Hash} (size\+\_\+t init\+\_\+size)\label{classHash_af865b46873f217c0a6f4c216697ad8ac}
+
+\item 
+\hypertarget{classHash_a560a4d16dc1a6b68f429c588b2c11545}{}V \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (const K \&Key)\label{classHash_a560a4d16dc1a6b68f429c588b2c11545}
+
+\item 
+\hypertarget{classHash_a755799ff6fd76a4a0feec145700a878f}{}V \& {\bfseries insert} (const K \&Key, V \&Value)\label{classHash_a755799ff6fd76a4a0feec145700a878f}
+
+\item 
+\hypertarget{classHash_a5785086ca51aa08e7175e97e4a853334}{}V {\bfseries find} (const K \&Key)\label{classHash_a5785086ca51aa08e7175e97e4a853334}
+
+\item 
+\hypertarget{classHash_abd05714536838b5bd2a393036c7437db}{}size\+\_\+t {\bfseries size} ()\label{classHash_abd05714536838b5bd2a393036c7437db}
+
+\item 
+\hypertarget{classHash_a6b0680a8de89ffa05aefbe05d0e6d738}{}double {\bfseries load\+Factor} ()\label{classHash_a6b0680a8de89ffa05aefbe05d0e6d738}
+
+\item 
+\hypertarget{classHash_addea524e1e28ddc1731287f5cbc11c71}{}int {\bfseries hash\+Code\+Generated} (int hash\+Code)\label{classHash_addea524e1e28ddc1731287f5cbc11c71}
+
+\item 
+\hypertarget{classHash_a657948b69c87858fb8f197ddb4c9da0b}{}int $\ast$ {\bfseries bucket\+Probed} ()\label{classHash_a657948b69c87858fb8f197ddb4c9da0b}
+
+\item 
+\hypertarget{classHash_a453733aa477944c75e30f629f12e7dd7}{}void {\bfseries remove} (const K \&Key)\label{classHash_a453733aa477944c75e30f629f12e7dd7}
+
+\item 
+\hypertarget{classHash_a00bb410aea1cce94e1766d70e93534b4}{}void {\bfseries print\+\_\+table} ()\label{classHash_a00bb410aea1cce94e1766d70e93534b4}
+
+\item 
+\hypertarget{classHash_a3e5bfab4dde4f0157d7b689d599ab294}{}K {\bfseries get\+Key} (int index)\label{classHash_a3e5bfab4dde4f0157d7b689d599ab294}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class K, class V$>$class Hash$<$ K, V $>$}
+
+\begin{DoxyAuthor}{Author}
+Zac Christy, Kenneth Petry
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+A class used to operate and implement the \hyperlink{classHash}{Hash} table data structure
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em init\+\_\+size} & \\
+\hline
+\mbox{\tt in}  & {\em argv} & -\/ a pointer array full of the character strings signifying the files and function calls needed by the user\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 program ran successful. 
+
+1 the program failed or there was an error. 
+\end{DoxyReturn}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classHash_a37942689c0b3909fd9d4223e972b3214}{}\index{Hash@{Hash}!Hash@{Hash}}
+\index{Hash@{Hash}!Hash@{Hash}}
+\subsubsection[{Hash()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename V $>$ {\bf Hash}$<$ K, V $>$\+::{\bf Hash} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classHash_a37942689c0b3909fd9d4223e972b3214}
+zero parameter constructor
+
+\begin{DoxyAuthor}{Author}
+Kenneth Petry
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+A Constructor to initialize the size of the hash table when no size is specialized in the instantiation of the \hyperlink{classHash}{Hash} Table 
+\end{DoxyParagraph}
+\hypertarget{classHash_af865b46873f217c0a6f4c216697ad8ac}{}\index{Hash@{Hash}!Hash@{Hash}}
+\index{Hash@{Hash}!Hash@{Hash}}
+\subsubsection[{Hash(size\+\_\+t init\+\_\+size)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename V $>$ {\bf Hash}$<$ K, V $>$\+::{\bf Hash} (
+\begin{DoxyParamCaption}
+\item[{size\+\_\+t}]{init\+\_\+size}
+\end{DoxyParamCaption}
+)}\label{classHash_af865b46873f217c0a6f4c216697ad8ac}
+one parameter constructor
+
+\begin{DoxyAuthor}{Author}
+Kenneth Petry
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+A Constructor to initialize the size of the hash table when a size is specified by the instantiation.
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em init\+\_\+size} & -\/ the minimum size of the table specified by instantiation. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classHash_aa4cf3d3f9f57ae71aaa4d80d31d08551}{}\index{Hash@{Hash}!````~Hash@{$\sim$\+Hash}}
+\index{````~Hash@{$\sim$\+Hash}!Hash@{Hash}}
+\subsubsection[{$\sim$\+Hash()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename V $>$ {\bf Hash}$<$ K, V $>$\+::$\sim${\bf Hash} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classHash_aa4cf3d3f9f57ae71aaa4d80d31d08551}
+destructor
+
+\begin{DoxyAuthor}{Author}
+Kenneth Petry
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+A deconstructor for the \hyperlink{classHash}{Hash} Table class 
+\end{DoxyParagraph}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classHash_af61bd05265387d4cf9930cbfd9cff57e}{}\index{Hash@{Hash}!bucket\+Probed@{bucket\+Probed}}
+\index{bucket\+Probed@{bucket\+Probed}!Hash@{Hash}}
+\subsubsection[{bucket\+Probed()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename V $>$ int $\ast$ {\bf Hash}$<$ K, V $>$\+::bucket\+Probed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classHash_af61bd05265387d4cf9930cbfd9cff57e}
+frequency of a hash code
+
+\begin{DoxyAuthor}{Author}
+Zac Christy
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+A function that returns a pointer to an integer
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em probed} & -\/ a pointer to an array of ints denoting how many times a bucket was probed\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+probed A pointer to an array of ints denoting how many times a bucket was probed. 
+\end{DoxyReturn}
+\hypertarget{classHash_a5785086ca51aa08e7175e97e4a853334}{}\index{Hash@{Hash}!find@{find}}
+\index{find@{find}!Hash@{Hash}}
+\subsubsection[{find(const K \&\+Key)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename V $>$ V {\bf Hash}$<$ K, V $>$\+::find (
+\begin{DoxyParamCaption}
+\item[{const K \&}]{Key}
+\end{DoxyParamCaption}
+)}\label{classHash_a5785086ca51aa08e7175e97e4a853334}
+find a key
+
+\begin{DoxyAuthor}{Author}
+Zachary Christy
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+A function that searches through the \hyperlink{classHash}{Hash} Table for the Bucket containing the key given as its argument. It then returns the value of that bucket.
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Key} & -\/ The key value being searched for \\
+\hline
+\mbox{\tt out}  & {\em value} & -\/ The value of the bucket being searched for\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value the returned value of the bucket being searched for 
+\end{DoxyReturn}
+\hypertarget{classHash_a3e5bfab4dde4f0157d7b689d599ab294}{}\index{Hash@{Hash}!get\+Key@{get\+Key}}
+\index{get\+Key@{get\+Key}!Hash@{Hash}}
+\subsubsection[{get\+Key(int index)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename V $>$ K {\bf Hash}$<$ K, V $>$\+::get\+Key (
+\begin{DoxyParamCaption}
+\item[{int}]{index}
+\end{DoxyParamCaption}
+)}\label{classHash_a3e5bfab4dde4f0157d7b689d599ab294}
+\begin{DoxyAuthor}{Author}
+Zac Christy
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+A function that returns the value of a key at a specific index
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em index} & -\/ The index, or \hyperlink{classHash}{Hash} Code of the bucket to be checked\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+key The key of the bucket to be searched 
+\end{DoxyReturn}
+\hypertarget{classHash_addea524e1e28ddc1731287f5cbc11c71}{}\index{Hash@{Hash}!hash\+Code\+Generated@{hash\+Code\+Generated}}
+\index{hash\+Code\+Generated@{hash\+Code\+Generated}!Hash@{Hash}}
+\subsubsection[{hash\+Code\+Generated(int hash\+Code)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename V $>$ int {\bf Hash}$<$ K, V $>$\+::hash\+Code\+Generated (
+\begin{DoxyParamCaption}
+\item[{int}]{hash\+Code}
+\end{DoxyParamCaption}
+)}\label{classHash_addea524e1e28ddc1731287f5cbc11c71}
+count of time hash\+Code was generated
+
+\begin{DoxyAuthor}{Author}
+Zac Christy
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+Function returns how many times a hash code was generated. Since the table handles collisions and searches by re-\/hashing, this is identical to the amount of times a bucket has been probed.
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em hash\+Code} & -\/ The hash code to be checked\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+probed How many times a hash code was generated 
+\end{DoxyReturn}
+\hypertarget{classHash_aee6a11f986c5924af8dd95f5d4f0e945}{}\index{Hash@{Hash}!insert@{insert}}
+\index{insert@{insert}!Hash@{Hash}}
+\subsubsection[{insert(const K \&\+Key, V \&\+Value)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename V $>$ V \& {\bf Hash}$<$ K, V $>$\+::insert (
+\begin{DoxyParamCaption}
+\item[{const K \&}]{Key, }
+\item[{V \&}]{Value}
+\end{DoxyParamCaption}
+)}\label{classHash_aee6a11f986c5924af8dd95f5d4f0e945}
+insert
+
+\begin{DoxyAuthor}{Author}
+Zac Christy Kenneth Petry
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+A function that inserts the key/value pair into the \hyperlink{classHash}{Hash} Table and returns the value of that bucket by reference. The counter of filled buckets is also incremented.
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Key} & -\/ a value denoting the number of arguments declared in the command line \\
+\hline
+\mbox{\tt in}  & {\em Value} & -\/ a pointer array full of the character strings signifying the files and function calls needed by the user \\
+\hline
+\mbox{\tt out}  & {\em Value} & -\/ The value of the bucket returned by reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\&value value of the bucket that was accessed by reference 
+\end{DoxyReturn}
+\hypertarget{classHash_a6b0680a8de89ffa05aefbe05d0e6d738}{}\index{Hash@{Hash}!load\+Factor@{load\+Factor}}
+\index{load\+Factor@{load\+Factor}!Hash@{Hash}}
+\subsubsection[{load\+Factor()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename V $>$ double {\bf Hash}$<$ K, V $>$\+::load\+Factor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classHash_a6b0680a8de89ffa05aefbe05d0e6d738}
+load factor
+
+\begin{DoxyAuthor}{Author}
+Zac Christy
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+A function that returns the load factor of the table.
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em t\+Size} & -\/ The size of the table \\
+\hline
+\mbox{\tt in}  & {\em counter} & -\/ The amount of filled buckets\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+counter/t\+Size Returns the load factor of the Table 
+\end{DoxyReturn}
+\hypertarget{classHash_a9e05844661ba3960f6381148b56f5cf7}{}\index{Hash@{Hash}!operator\mbox{[}$\,$\mbox{]}@{operator[]}}
+\index{operator\mbox{[}$\,$\mbox{]}@{operator[]}!Hash@{Hash}}
+\subsubsection[{operator[](const K \&\+Key)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename V $>$ V \& {\bf Hash}$<$ K, V $>$\+::operator\mbox{[}$\,$\mbox{]} (
+\begin{DoxyParamCaption}
+\item[{const K \&}]{Key}
+\end{DoxyParamCaption}
+)}\label{classHash_a9e05844661ba3960f6381148b56f5cf7}
+overloaded \mbox{[}\mbox{]}
+
+\begin{DoxyAuthor}{Author}
+Zac Christy
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+A function describing the overloaded \mbox{[}\mbox{]} operator functionality
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Key} & -\/ They key value of the bucket being searched for by the \mbox{[}\mbox{]} operator. \\
+\hline
+\mbox{\tt out}  & {\em value} & -\/ the value of the bucket with specified key value, passed by reference\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\&value of the bucket with specified key 
+\end{DoxyReturn}
+\hypertarget{classHash_a00bb410aea1cce94e1766d70e93534b4}{}\index{Hash@{Hash}!print\+\_\+table@{print\+\_\+table}}
+\index{print\+\_\+table@{print\+\_\+table}!Hash@{Hash}}
+\subsubsection[{print\+\_\+table()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename V $>$ void {\bf Hash}$<$ K, V $>$\+::print\+\_\+table (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classHash_a00bb410aea1cce94e1766d70e93534b4}
+Prints entire table for testing purposes
+
+\begin{DoxyAuthor}{Author}
+Zac Christy
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+A function that prints the contents of the table for data verification purposes. Not recommended for large tables.
+\end{DoxyParagraph}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classHash_a453733aa477944c75e30f629f12e7dd7}{}\index{Hash@{Hash}!remove@{remove}}
+\index{remove@{remove}!Hash@{Hash}}
+\subsubsection[{remove(const K \&\+Key)}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename V $>$ void {\bf Hash}$<$ K, V $>$\+::remove (
+\begin{DoxyParamCaption}
+\item[{const K \&}]{Key}
+\end{DoxyParamCaption}
+)}\label{classHash_a453733aa477944c75e30f629f12e7dd7}
+remove a key from hash
+
+\begin{DoxyAuthor}{Author}
+Zac Christy Kenneth Petry
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+A function that removes the key/value pair from the bucket with the specified key, marking it as deleted so that it is considered empty when inserting, and full when searching
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Key} & -\/ The key of the bucket to be marked as deleted\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\hypertarget{classHash_abd05714536838b5bd2a393036c7437db}{}\index{Hash@{Hash}!size@{size}}
+\index{size@{size}!Hash@{Hash}}
+\subsubsection[{size()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename K , typename V $>$ size\+\_\+t {\bf Hash}$<$ K, V $>$\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classHash_abd05714536838b5bd2a393036c7437db}
+current size
+
+\begin{DoxyAuthor}{Author}
+Zac Christy
+\end{DoxyAuthor}
+\begin{DoxyParagraph}{Description\+:}
+A function that returns the size of the table.
+\end{DoxyParagraph}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em t\+Size} & -\/ The size of the table\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+t\+Size The size of the table 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{Hash_8h}{Hash.\+h}\item 
+\hyperlink{Hash_8cpp}{Hash.\+cpp}\end{DoxyCompactItemize}

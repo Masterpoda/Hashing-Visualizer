@@ -1,0 +1,44 @@
+xxHash:
+http://fastcompression.blogspot.com/2014/07/xxhash-wider-64-bits.html
+
+Murmur:
+https://en.wikipedia.org/wiki/MurmurHash
+
+Statisical analysis of various hash codes (and what makes a good hash code):
+https://agkn.files.wordpress.com/2012/01/aval_diagram.png
+
+TON of primes here if you need them:
+http://compoasso.free.fr/primelistweb/page/prime/liste_online_en.php
+
+
+Using Murmur with 2^n Table Size:
+
+size: 65536
+
+Collisions: 6964
+
+Collision rate: 10.6262%
+
+Time to Hash up to .5 LF: 10.421ms
+Time to Hash up to .5 LF: 16.601ms
+Time to Hash up to .5 LF: 12.106ms
+Time to Hash up to .5 LF: 3.918ms
+
+
+
+Using Murmur with Prime Table Size
+
+size: size: 65537
+
+Collisions: 7072
+
+Collision rate: 10.7909%
+
+Time to Hash up to .5 LF: 4.087ms
+Time to Hash up to .5 LF: 14.85ms
+Time to Hash up to .5 LF: 4.884ms
+Time to Hash up to .5 LF: 7.118ms
+
+
+
+

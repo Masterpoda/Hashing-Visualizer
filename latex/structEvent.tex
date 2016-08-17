@@ -1,0 +1,71 @@
+\hypertarget{structEvent}{}\section{Event Struct Reference}
+\label{structEvent}\index{Event@{Event}}
+
+
+Contains information about the event that is happening and constructors that assign enums and data depending on what is passed in. Depending on the complexity of the application, the event structure might need to be extended.  
+
+
+
+
+{\ttfamily \#include $<$util.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structEvent_a5a40dd4708297f7031e29b39e039ae10}{Event} ()
+\begin{DoxyCompactList}\small\item\em object containing Guess\+Grid data \end{DoxyCompactList}\item 
+\hypertarget{structEvent_a89fff1e6d2c2b40891c118cbfffbe47a}{}\hyperlink{structEvent_a89fff1e6d2c2b40891c118cbfffbe47a}{Event} (int rows, int cols)\label{structEvent_a89fff1e6d2c2b40891c118cbfffbe47a}
+
+\begin{DoxyCompactList}\small\item\em the call from init\+Open\+G\+L \end{DoxyCompactList}\item 
+\hypertarget{structEvent_a1de84dca9afcccd3025d136995c8da81}{}\hyperlink{structEvent_a1de84dca9afcccd3025d136995c8da81}{Event} (unsigned char k, int x\+Pos, int y\+Pos)\label{structEvent_a1de84dca9afcccd3025d136995c8da81}
+
+\begin{DoxyCompactList}\small\item\em keyboard event \end{DoxyCompactList}\item 
+\hypertarget{structEvent_a459325ca9826cb3f934721743927eba3}{}\hyperlink{structEvent_a459325ca9826cb3f934721743927eba3}{Event} (int b, int s, int x\+Pos, int y\+Pos)\label{structEvent_a459325ca9826cb3f934721743927eba3}
+
+\begin{DoxyCompactList}\small\item\em mouse click in place \end{DoxyCompactList}\item 
+\hypertarget{structEvent_a83a5f2845a85878320b5c38b86562a4f}{}\hyperlink{structEvent_a83a5f2845a85878320b5c38b86562a4f}{Event} (\hyperlink{util_8h_a2628ea8d12e8b2563c32f05dc7fff6fa}{Event\+Type} e, int x\+Start, int y\+Start)\label{structEvent_a83a5f2845a85878320b5c38b86562a4f}
+
+\begin{DoxyCompactList}\small\item\em mouse drag across screen \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{structEvent_ac88c22138e81d007cff4cab436f1143b}{}\hyperlink{util_8h_a2628ea8d12e8b2563c32f05dc7fff6fa}{Event\+Type} \hyperlink{structEvent_ac88c22138e81d007cff4cab436f1143b}{eventtype}\label{structEvent_ac88c22138e81d007cff4cab436f1143b}
+
+\begin{DoxyCompactList}\small\item\em type of event to handle \end{DoxyCompactList}\item 
+\hypertarget{structEvent_afd595f11f3290cb27aaf925f1b429783}{}unsigned char \hyperlink{structEvent_afd595f11f3290cb27aaf925f1b429783}{key}\label{structEvent_afd595f11f3290cb27aaf925f1b429783}
+
+\begin{DoxyCompactList}\small\item\em keyboard key pressed by user \end{DoxyCompactList}\item 
+\hypertarget{structEvent_a2b66667c284e4ec706958dbdf1bfc12b}{}int \hyperlink{structEvent_a2b66667c284e4ec706958dbdf1bfc12b}{button}\label{structEvent_a2b66667c284e4ec706958dbdf1bfc12b}
+
+\begin{DoxyCompactList}\small\item\em mouse button pressed \end{DoxyCompactList}\item 
+\hypertarget{structEvent_a1002e96b4f00878fb4751296cf7ae6fd}{}int \hyperlink{structEvent_a1002e96b4f00878fb4751296cf7ae6fd}{state}\label{structEvent_a1002e96b4f00878fb4751296cf7ae6fd}
+
+\begin{DoxyCompactList}\small\item\em mouse button position (up or down) \end{DoxyCompactList}\item 
+\hypertarget{structEvent_ab451062e9ceee3ff4ebbc5bfcb4a2af6}{}int \hyperlink{structEvent_ab451062e9ceee3ff4ebbc5bfcb4a2af6}{x}\label{structEvent_ab451062e9ceee3ff4ebbc5bfcb4a2af6}
+
+\begin{DoxyCompactList}\small\item\em x-\/coordinate of mouseclick \end{DoxyCompactList}\item 
+\hypertarget{structEvent_a3f0da856fc398144d2df10cc96f5147b}{}int \hyperlink{structEvent_a3f0da856fc398144d2df10cc96f5147b}{y}\label{structEvent_a3f0da856fc398144d2df10cc96f5147b}
+
+\begin{DoxyCompactList}\small\item\em x-\/coordinate of mouseclick \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains information about the event that is happening and constructors that assign enums and data depending on what is passed in. Depending on the complexity of the application, the event structure might need to be extended. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{structEvent_a5a40dd4708297f7031e29b39e039ae10}{}\index{Event@{Event}!Event@{Event}}
+\index{Event@{Event}!Event@{Event}}
+\subsubsection[{Event()}]{\setlength{\rightskip}{0pt plus 5cm}Event\+::\+Event (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{structEvent_a5a40dd4708297f7031e29b39e039ae10}
+
+
+object containing Guess\+Grid data 
+
+if there are no other params, display routine 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{util_8h}{util.\+h}\end{DoxyCompactItemize}
